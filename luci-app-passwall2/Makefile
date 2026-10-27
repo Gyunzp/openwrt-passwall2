@@ -118,6 +118,11 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin
 	select PACKAGE_v2ray-plugin
 	default y if aarch64||arm||i386||x86_64
 
+config PACKAGE_$(PKG_NAME)_INCLUDE_Shadow_TLS
+	bool "Include Shadow-TLS (Shadowsocks Plugin)"
+	select PACKAGE_shadow-tls
+	default y if aarch64||arm||i386||x86_64
+
 endmenu
 endef
 
